@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iris Classification App</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #4f46e5, #3b82f6);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      margin: 0;
+    }
+
+    .container {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 40px 30px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    p {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 20px;
+      border: 1.5px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: border-color 0.3s;
+    }
+
+    input[type="number"]:focus {
+      border-color: #4f46e5;
+      outline: none;
+      box-shadow: 0 0 5px rgba(79, 70, 229, 0.5);
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(to right, #4f46e5, #3b82f6);
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background: linear-gradient(to right, #4338ca, #2563eb);
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Iris Classification App</h1>
+    <p>Enter flower measurements to classify the Iris species (Decision Tree Model)</p>
+
+    <form action="/" method="POST">
+      <label for="sepal_length">Sepal Length (cm):</label>
+      <input type="number" step="0.1" id="sepal_length" name="sepal_length" required>
+
+      <label for="sepal_width">Sepal Width (cm):</label>
+      <input type="number" step="0.1" id="sepal_width" name="sepal_width" required>
+
+      <label for="petal_length">Petal Length (cm):</label>
+      <input type="number" step="0.1" id="petal_length" name="petal_length" required>
+
+      <label for="petal_width">Petal Width (cm):</label>
+      <input type="number" step="0.1" id="petal_width" name="petal_width" required>
+
+      <input type="submit" value="Classify">
+    </form>
+  </div>
+
+</body>
+</html>
